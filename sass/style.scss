@@ -1,0 +1,419 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+body {
+	position: relative;
+	font-family: 'Rajdhani', sans-serif;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $backup-color;
+}
+
+.yellow-text {
+	color: $first-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+// nav
+
+nav {
+	text-transform: uppercase;
+	transition: background-color 0.6s;
+	z-index: 5;
+
+	.nav-link,
+	.navbar-brand,
+	.nav-link.active,
+	.navbar-toggler {
+		color: $white;
+	}
+
+	.nav-link:hover,
+	.navbar-brand:hover,
+	.nav-link.active:hover,
+	.navbar-toggler:hover {
+		color: $first-color;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+}
+
+// header
+
+header {
+	color: $white;
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 14px;
+	}
+
+	.bg-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/hero-small.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+
+	.bg-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: -10;
+	}
+
+	.bg-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 5;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+	.fa-circle-arrow-down {
+		position: absolute;
+		font-size: 40px;
+		bottom: 20px;
+		left: 50%;
+		translate: -50% 0;
+		color: $first-color;
+	}
+}
+
+// aboutus
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+	
+}
+
+.aboutus-hero {
+	position: relative;
+	background-image: url('../img/technology-small.jpg');
+	background-position: center;
+	background-size: cover;
+	color: $less-white;
+	z-index: 0;
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -10;
+	}
+
+	.aboutus-hero-item {
+		margin: 10px 0;
+	}
+
+	i {
+		font-size: 36px;
+	}
+
+	.aboutus-hero-title {
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+}
+
+// portfolio
+
+.portfolio {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+
+	.carousel-caption {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.8);
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+}
+
+//ceny
+
+.prices {
+	.price-wrap {
+		.price-box {
+			margin: 20px 10px;
+			padding: 20px;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+			// transition: background-color 0.5s, scale 0.5s, rotate 1s;
+
+			h3 {
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			span {
+				font-weight: bold;
+			}
+			button {
+				text-transform: uppercase;
+			}
+		}
+
+		.price-tag {
+			font-size: 30px;
+			font-weight: bold;
+		}
+	}
+	.price-box:hover {
+		scale: (1.05);
+	}
+
+	.silver:hover {
+		background-color: #c7d1da;
+	}
+	.gold:hover {
+		background-color: #dfc76c;
+	}
+	.diamond:hover {
+		background-color: #b9f2ff;
+	}
+
+	.price-info {
+		margin-top: 40px;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+//zespół
+.team {
+	position: relative;
+	background-image: url('../img/team/team-bg.jpg');
+
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+	h2 {
+		color: $less-white;
+	}
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -10;
+	}
+	.card {
+		transition: scale 0.3s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+		i {
+			padding: 10px;
+		}
+	}
+	.card-title {
+		height: 55px;
+		font-size: 25px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.card-text {
+		font-size: 15px;
+	}
+	.card-footer {
+		i {
+			padding: 10px;
+			font-size: 20px;
+			color: black;
+		}
+	}
+	.card:hover {
+		scale: (0.96);
+	}
+}
+
+//achivements
+
+.achivements {
+	.ach-icon {
+		padding: 10px;
+		font-size: 45px;
+		color: $white;
+		text-shadow: 0 0 5px black;
+	}
+	.ach-number {
+		font-size: 20px;
+	}
+	.ach-text {
+		font-size: 17px;
+		text-transform: uppercase;
+	}
+
+	.ach-wrap {
+		padding: 20px 0;
+	}
+}
+
+//contact
+
+.contact {
+	position: relative;
+	background-image: url('../img/tło.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+	h2 {
+		color: $less-white;
+		font-weight: bold;
+	}
+	.underline {
+		background-color: $less-white;
+	}
+	.contact-us {
+		display: flex;
+		align-items: center;
+		color: $less-white;
+		.contact-item{
+			margin: 30px 0;
+			
+			h3 {
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				font-size: 30px;
+			}
+			
+			a{
+				padding: 10px;
+				color: $less-white;
+				font-size: 25px;
+				transition: color .3s;
+			}
+			a:hover{
+				color: $first-color;
+			}	
+		}
+	}
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.85);
+		z-index: -5;
+	}
+}
+
+// media
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 32px;
+		}
+	}
+	.team {
+		.card-text {
+			font-size: 20px;
+		}
+	}
+}
+@media (min-width: 375px) and (max-width: 768px) {
+	nav {
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	.team {
+		.card-text {
+			height: 25vh;
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+	.aboutus-hero {
+		background-image: url('../img/technology-big.jpg');
+	}
+	.prices {
+		.price-info {
+			font-size: 22px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	header {
+		.bg-img {
+			background-image: url('../img/hero-big.jpg');
+		}
+	}
+}
